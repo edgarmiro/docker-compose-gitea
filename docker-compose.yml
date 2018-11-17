@@ -6,7 +6,7 @@ services:
   app:
     container_name: gitea-app
     restart: always
-    image: gitea/gitea:${GITEA_VERSION}
+    image: kapdap/gitea-rpi
     links:
       - db:mysql
     volumes:
@@ -23,7 +23,7 @@ services:
   db:
     container_name: gitea-db
     restart: always
-    image: mysql:5.6
+    image: hypriot/rpi-mysql
     volumes:
       - ./volumes/gitea_db:/var/lib/mysql
     environment:
