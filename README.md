@@ -46,3 +46,9 @@ The first registered user has admin privileges.
 1. Create symbolic link: ``ln -s docker-gitea.service /etc/systemd/system/docker-gitea.service``
 1. Start service: ``systemctl start docker-gitea``
 1. (optional) Enable autostart at boot: ``systemctl enable docker-gitea``
+
+
+## Enable file search
+- docker exec -it --user root gitea-app bash
+- echo -e "[indexer]\nREPO_INDEXER_ENABLED = true" >> /data/gitea/conf/app.ini
+- docker restart gitea-app
