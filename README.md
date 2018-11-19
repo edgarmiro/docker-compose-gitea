@@ -49,6 +49,6 @@ The first registered user has admin privileges.
 
 
 ## Enable file search
-- docker exec -it --user root gitea-app bash
-- echo -e "[indexer]\nREPO_INDEXER_ENABLED = true" >> /data/gitea/conf/app.ini
-- docker restart gitea-app
+1. docker exec -it --user root gitea-app bash
+2. echo -e "[indexer]\nREPO_INDEXER_ENABLED = true" >> /data/gitea/conf/app.ini
+3. docker restart gitea-app
